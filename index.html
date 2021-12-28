@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="rgba(233, 61, 107, .7)" />
+  
+  <title>Bookself Apps</title>
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+  <header>
+    <img class="logo" src="assets/logo.svg" alt="logo">
+    <nav>
+        <div>
+            <ul class="navigation">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#pages">Pages</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#landing">Landing</a></li>
+           </ul>
+        </div>
+    </nav>
+  </header>
+
+
+  <section class="search_section">
+    <h2>Cari Buku</h2>
+    <form id="searchBook" action="/action_page.php">
+        <label for="searchBookTitle" >Judul</label>
+        <input id="searchBookTitle" type="text" placeholder="Search.." name="search">
+        <button id="searchSubmit" type="submit">Cari</button>
+    </form>
+  </section>
+
+  <div class="coli">
+    <div class="welcome" id="home">
+      <img src="assets/Shakespeare.jpg" class="Shakespeare"  width: 900px;
+      height: 400px; alt="Shakespeare">
+    </div>
+
+  <div id="pembatas">
+      <h1 class="beda">Don't Stop Reading</h1>
+  </div>
+
+  
+  <div class="content">
+    <div class="kanan" id="pages">
+      <div class="user-information my-container">
+
+        <h1 class="user-name">Jumlah Buku Yang Diinput</h1>
+        <ul>
+          <li>
+            <p>Jumlah Buku</p>
+            <h4 id="jumlahBuku">100</h4>
+          </li>
+        </ul>
+      </div>
+  
+      <div class="my-container icons">
+        <div class="my-icon">
+          <div class="read-icon">
+            <i class="fi-rr-book-alt"></i>
+          </div>
+
+          <h5>Dibaca</h5>
+        </div>
+        <div class="my-icon">
+          <div class="unread-icon">
+            <i class="fi-rr-book"></i>
+          </div>
+          <h5>Belum Dibaca</h5>
+        </div>
+        <div class="my-icon">
+           <div class="add-book" id="add-book">
+            <i class="fi-rr-file-add"></i>
+          </div>
+          <h5>add</h5>
+        </div>
+      </div>
+    </div>
+    
+
+
+    <div class="kiri">  
+      <div class="content-book">
+        <div class="unread" id="unread">
+          <h4 class="">Belum Dibaca</h4>
+        </div>
+        
+         <div class="read" id="read">
+          <h4>Sudah Dibaca</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div id="modal">
+        <section class="my-container">
+            <h2>New Book</h2>
+            <form id="form">
+                <div class="input-group">
+                    <input type="text" id="title" placeholder="Judul" Buku" class="input-form"
+                        maxlength="120" pattern="^[a-zA-Z0-9_ ]*$" required />
+                </div>
+                <div class="input-group">
+                    <input type="text" id="author" placeholder="Author" class="input-form"
+                        maxlength="60" pattern="^[a-zA-Z0-9_ ]*$" required />
+                </div>
+                <div class="input-group">
+                    <input type="date" id="year" 
+                        class="input-form" min="1900" max="2026" />
+                </div>
+                <div class="button-group">
+                    <button type="reset" class="close" id="close">Close</button>
+                    <button type="submit" id="save">Save</button>
+                </div>
+            </form>
+        </section>
+    </div>
+    
+<footer>
+  Thank You
+</footer>
+
+  <script src="./storage.js"></script>
+  <script src="./dom.js"></script>
+</body>
+</html>
